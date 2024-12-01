@@ -32,5 +32,6 @@ jobs:
       run: |
           for i in yacpl/tests/*.py
           do
-            python -m unittest i.py
+            echo i
+            python -m unittest i
           done
