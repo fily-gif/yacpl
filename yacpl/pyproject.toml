@@ -6,16 +6,16 @@ build-backend = "setuptools.build_meta" # If not defined, then legacy behavior c
 [project]
 name = "yacpl"
 
-version = "1.0.0" # REQUIRED, although can be dynamic
+version = "1.0.3" # REQUIRED, although can be dynamic
 
 description = "A simple print()-esque library that suppoerts colors!"
 
-readme = "README.md"
+readme = "../README.md"
 requires-python = ">=3.9"
 license = { file = "LICENSE" }
 
 keywords = ["yacpl", "colorama", "yaclp", "print", "colors", "color print", "ansi", "colours", "colour print"]
-authors = [{ name = "A. Random Developer", email = "zeroad69@gmail.com" }]
+authors = [{ name = "fily", email = "zeroad69@gmail.com" }]
 
 # This should be your name or the names of the organization who currently
 # maintains the project, and a valid email address corresponding to the name
