@@ -31,7 +31,7 @@ jobs:
         python -m pip install setuptools wheel
     - name: Test with unittest
       run: | # it has to build and install yacpl locally first :yui_eyes:
-        ls
+        cd yacpl
         python -m pip install -e .
         python -m unittest discover -s ./tests -p "*_test.py"
         
