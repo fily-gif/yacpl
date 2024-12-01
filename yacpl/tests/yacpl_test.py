@@ -11,6 +11,7 @@ class Testyacpl(unittest.TestCase):
 	def test_default_colors(self):
 		with self.assertLogs(level='DEBUG') as log:
 			self.yacpl("Hello")
+			print(f"log: {log.output[0]}")
 			self.assertIn('got Hello, Color.WHITE, Color.BLACK!', log.output[0])
 
 	def test_custom_colors(self):

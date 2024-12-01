@@ -8,12 +8,12 @@ class TestANSIfy(unittest.TestCase):
 
 	def test_valid_colors(self):
 		result = ANSIfy("Hello", Color.RED, Color.GREEN)
-		expected = '\033[31;42mHello\033[0;0m'
+		expected = '\033[31;42mHello\033[0m'
 		self.assertEqual(result, expected)
 
 	def test_default_background_color(self):
 		result = ANSIfy("Hello", Color.BLUE)
-		expected = '\033[34;40mHello\033[0;0m'
+		expected = '\033[34;40mHello\033[0m'
 		self.assertEqual(result, expected)
 
 	def test_invalid_foreground_color(self):

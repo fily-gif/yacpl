@@ -14,11 +14,14 @@ class Color(Enum):
 	WHITE = 97, 107
 	RESET = 0, 0 # i guess we doing strings now (its way easier to just do this tbh)
 
-def tuple_to_list(tuple) -> list:
-	print(tuple)
-	listified = list(tuple)
-	print(listified)
-	return listified
+def tuple_to_list(tup) -> list:
+	if not isinstance(tup, tuple):
+		raise ValueError(f'Invalid type: {type(tuple)}')
+	else:
+		print(tup)
+		listified = list(tup)
+		print(listified)
+		return listified
 
 def ANSIfy(string, fg, bg=Color.BLACK) -> str | None:
 	"""
@@ -36,15 +39,20 @@ def ANSIfy(string, fg, bg=Color.BLACK) -> str | None:
 		ValueError: If there is an issue with converting the colors or formatting the string.
 	"""
 	try:
-		fg_list = tuple_to_list(fg.value)
-		print(f'fg:{fg_list}')
-		bg_list = tuple_to_list(bg.value)
-		print(f'bg:{bg_list}')
-		reset = Color.RESET
-		reset = tuple_to_list(reset.value)
-		final_string = f'\033[{fg_list[0]};{bg_list[1]}m{string}\033[{reset[0]}'
-		logging.debug(str(final_string))
-		return final_string
+		if not isinstance(fg, Color):
+			raise ValueError(f'Invalid color: {fg}')
+		elif not isinstance(bg, Color):
+			raise ValueError(f'Invalid color: {bg}')
+		else:
+			fg_list = tuple_to_list(fg.value)
+			print(f'fg:{fg_list}')
+			bg_list = tuple_to_list(bg.value)
+			print(f'bg:{bg_list}')
+			reset = Color.RESET
+			reset = tuple_to_list(reset.value)
+			final_string = f'\033[{fg_list[0]};{bg_list[1]}m{string}\033[{reset[0]}m'
+			#logging.debug(str(final_string))
+			return final_string
 	except ValueError as ve:
 		logging.error(f'Something went extremely wrong! {ve}')
 		logging.debug(ve)
