@@ -30,4 +30,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with unittest
       run: |
-        for filename in tests/*.py do python3 -m unittest filename; done
+          for i in yacpl/tests/*.py
+          do
+            python -m unittest i.py
+          done
