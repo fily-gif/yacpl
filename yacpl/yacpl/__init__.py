@@ -2,7 +2,7 @@ import logging
 from .utils import Color, ANSIfy
 logging.getLogger(__name__)
 
-class Yaclp:
+class Yacpl:
 	def __init__(self):
 		pass
 	def __call__(self, text, fg: Color = Color.WHITE, bg: Color = Color.BLACK):

@@ -1,5 +1,5 @@
 from yacpl import Yacpl, Color
 
-yaclp = Yacpl()
+yacpl = Yacpl()
 
-yaclp("Hello, World!", fg=Color.RED, bg=Color.WHITE)
+yacpl("Hello, World!", fg=Color.RED, bg=Color.WHITE)

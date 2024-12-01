@@ -1,6 +1,6 @@
 import logging
 from enum import Enum
-logger = logging.getLogger('yaclp')
+logger = logging.getLogger('yacpl')
 #logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s") # tbf i never used 
 
 class Color(Enum):
@@ -12,9 +12,10 @@ class Color(Enum):
 	MAGENTA = 35, 45
 	CYAN = 36, 46
 	WHITE = 97, 107
-	RESET = '\033[0;0m' # i guess we doing strings now (its way easier to just do this tbh)
+	RESET = 0, 0 # i guess we doing strings now (its way easier to just do this tbh)
 
 def tuple_to_list(tuple) -> list:
+	print(tuple)
 	listified = list(tuple)
 	print(listified)
 	return listified
@@ -36,11 +37,12 @@ def ANSIfy(string, fg, bg=Color.BLACK) -> str | None:
 	"""
 	try:
 		fg_list = tuple_to_list(fg.value)
-		print(fg_list)
+		print(f'fg:{fg_list}')
 		bg_list = tuple_to_list(bg.value)
-		print(bg_list)
+		print(f'bg:{bg_list}')
+		reset = Color.RESET
 		reset = tuple_to_list(reset.value)
-		final_string = f'\033[{fg_list[1]};{bg_list[2]}m{string}{reset}'
+		final_string = f'\033[{fg_list[0]};{bg_list[1]}m{string}\033[{reset[0]}'
 		logging.debug(str(final_string))
 		return final_string
 	except ValueError as ve:
