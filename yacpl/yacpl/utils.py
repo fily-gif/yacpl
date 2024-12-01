@@ -18,9 +18,9 @@ def tuple_to_list(tup) -> list:
 	if not isinstance(tup, tuple):
 		raise ValueError(f'Invalid type: {type(tuple)}')
 	else:
-		print(tup)
+		#print(tup)
 		listified = list(tup)
-		print(listified)
+		#print(listified)
 		return listified
 
 def ANSIfy(string, fg, bg=Color.BLACK) -> str | None:
@@ -45,9 +45,9 @@ def ANSIfy(string, fg, bg=Color.BLACK) -> str | None:
 			raise ValueError(f'Invalid color: {bg}')
 		else:
 			fg_list = tuple_to_list(fg.value)
-			print(f'fg:{fg_list}')
+			#print(f'fg:{fg_list}')
 			bg_list = tuple_to_list(bg.value)
-			print(f'bg:{bg_list}')
+			#print(f'bg:{bg_list}')
 			reset = Color.RESET
 			reset = tuple_to_list(reset.value)
 			final_string = f'\033[{fg_list[0]};{bg_list[1]}m{string}\033[{reset[0]}m'
