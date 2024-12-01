@@ -28,6 +28,8 @@ jobs:
 
       - name: Build release distributions
         run: |
+          pwd
+          ls
           # NOTE: put your own distribution build steps here.
           python -m pip install build
           python -m build
