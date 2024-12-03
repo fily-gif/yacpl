@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 # trigger gh actions
 setup(
     name='yacpl',
-	version='1.0.6',
+	version='1.0.7',
     packages=find_packages('yacpl'),
     long_description=long_description,
     long_description_content_type='text/markdown'
