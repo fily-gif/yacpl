@@ -1,8 +1,8 @@
 # YACPL
 
-> `Yet Another Color Print Library` A simple `print()`-esque library that supports ***colors***!
+> `Yet Another Color Print Library` A simple `print()`-esque library that supports ***colors***! (look mom no dependencies!!)
 
-###### yes i know that this is like the simples project that does the same as colorama and i really dont care tbh
+###### yes i know that this is like the simplest project ever and it does the same thing as colorama and i really dont care tbh lol
 
 ## Installation
 
