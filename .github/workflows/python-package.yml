@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.10", "3.11"]
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
 
     steps:
     - uses: actions/checkout@v4
@@ -32,6 +32,6 @@ jobs:
     - name: Test with unittest
       run: | # it has to build and install yacpl locally first :yui_eyes:
         python -m pip install -e .
-        cd yacpl
+        # cd yacpl
         python -m unittest discover -s ./tests -p "*_test.py"
         
