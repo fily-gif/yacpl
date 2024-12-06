@@ -1,9 +1,6 @@
 import unittest
 from yacpl.utils import ANSIfy, Color
 
-# yacpl/test_utils.py
-
-
 class TestANSIfy(unittest.TestCase):
 
 	def test_valid_colors(self):
