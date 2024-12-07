@@ -4,6 +4,8 @@
 
 ###### yes i know that this is like the simplest project that does the same as colorama and i really dont care tbh
 
+![yacpl intro gif](.assets/yacpl-intro.gif)
+
 ## Installation
 
 ```bash
