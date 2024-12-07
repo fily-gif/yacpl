@@ -1,5 +1,3 @@
-import yacpl
-print(yacpl.__file__)
 from yacpl import Yacpl, Color
 from time import sleep as sl
 
