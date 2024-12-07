@@ -2,11 +2,11 @@ name: python testpypi
 
 on:
   push:
-    branches: [ "main" ]
-    branches-ignore: [ "dev" ]
+    branches: [ "dev" ]
+    branches-ignore: [ "main" ]
   pull_request:
-    branches: [ "main" ]
-    branches-ignore: [ "dev" ]
+    branches: [ "dev" ]
+    branches-ignore: [ "main" ]
 
 jobs:
   build:
