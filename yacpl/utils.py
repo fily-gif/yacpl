@@ -58,28 +58,7 @@ def ANSIfy(string, fg, bg=Color.BLACK) -> str | None:
 		logging.debug(ve)
 		raise ValueError(f'Something went wrong! {ve}')
 
-def format_for_inline(string, fg, bg=Color.BLACK) -> str | None:
-	"""
-	Formats a given string with ANSI color codes for inline printing.
 
-	Args:
-		string (str): The string to be colored.
-		fg (Color): The foreground color as an instance of the Color enum.
-		bg (Color, optional): The background color as an instance of the Color enum. Defaults to Color.BLACK.
-
-	Returns:
-		str | None: The ANSI colored string if successful, otherwise raises an exception.
-	"""
-	try:
-		if "§" in string:
-			string = string.split("§")
-			string[1].split(";")
-			logging.debug(f'split string: {string}')
-
-	except Exception as e:
-		logging.error(f'Something went wrong! {e}')
-		logging.debug(e)
-		raise ValueError(f'Something went wrong! {e}')
 
 if __name__ == '__main__':
 	pass

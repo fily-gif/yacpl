@@ -2,7 +2,6 @@ import unittest
 from yacpl import Yacpl, Color
 #from yacpl.utils import Color, ANSIfy
 
-
 class Testyacpl(unittest.TestCase):
 
 	def setUp(self):
