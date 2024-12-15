@@ -23,7 +23,7 @@ def tuple_to_list(tup) -> list:
 		#print(listified)
 		return listified
 
-def ANSIfy(string, fg, bg=Color.BLACK) -> str | None:
+def ANSIfy(string, fg, bg=Color.BLACK) -> str | ValueError:
 	"""
 	Converts a given string to an ANSI colored string using the specified foreground and background colors.
 
@@ -33,7 +33,7 @@ def ANSIfy(string, fg, bg=Color.BLACK) -> str | None:
 		bg (Color, optional): The background color as an instance of the Color enum. Defaults to Color.BLACK.
 
 	Returns:
-		str | None: The ANSI colored string if successful, otherwise None.
+		str | ValueError: The ANSI colored string if successful, otherwise ValueError.
 
 	Raises:
 		ValueError: If there is an issue with converting the colors or formatting the string.
@@ -57,13 +57,3 @@ def ANSIfy(string, fg, bg=Color.BLACK) -> str | None:
 		logging.error(f'Something went extremely wrong! {ve}')
 		logging.debug(ve)
 		raise ValueError(f'Something went wrong! {ve}')
-
-def format_for_inline(string, fg, bg=Color.BLACK) -> str | None:
-	if "§" and ";" in string:
-		string = string.split('§')
-		pass # nvm lol
-	pass
-
-if __name__ == '__main__':
-	pass
-	#print(format_for_inline("fsjdlfjsdlfjskdfl§ksjdfkljeiofsdfjksjk§§§§isdfjiosdf;;", Color.GREEN))
