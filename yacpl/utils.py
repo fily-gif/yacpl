@@ -12,7 +12,7 @@ class Color(Enum):
 	MAGENTA = 35, 45
 	CYAN = 36, 46
 	WHITE = 97, 107
-	RESET = 0, 0 # i guess we doing strings now (its way easier to just do this tbh)
+	RESET = 0, 0
 
 def tuple_to_list(tup) -> list:
 	if not isinstance(tup, tuple):
@@ -57,3 +57,11 @@ def ANSIfy(string, fg, bg=Color.BLACK) -> str | ValueError:
 		logging.error(f'Something went extremely wrong! {ve}')
 		logging.debug(ve)
 		raise ValueError(f'Something went wrong! {ve}')
+
+
+def extract_formatting(text):
+
+	pass
+
+if __name__ == '__main__':
+	extract_formatting("&lna0;ewsdfe")
