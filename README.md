@@ -4,7 +4,9 @@
 
 > [!CAUTION]
 > **THIS IS A DEV VERSION OF YACPL. FOR THE STABLE VERSION PLEASE SEE THE `MAIN` BRANCH**
-
+---
+> [!NOTE]
+> **THIS IS A REWRITE BRANCH. THIS BRANCH SHOULD <u>NOT</u> BE USED <u>AT. ALL.</u>**
 ###### yes i know that this is like the simplest project that does the same as colorama and i really dont care tbh
 
 ## Installation
