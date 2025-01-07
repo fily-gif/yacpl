@@ -1,10 +1,12 @@
 import logging
-import utils
+from .utils import Fg, Bg, colorize
 
 class Printer():
 	def __init__(self):
 		pass
 
 	def __call__(self, text, fg, bg):
-		logging.log()
-		pass
+		#print(text, fg, bg)
+		#logging.log("sdf")
+		finished = colorize(text, fg, bg)
+		print(finished)

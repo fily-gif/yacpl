@@ -1,4 +1,4 @@
-import yacpl
-yacpl = yacpl.Printer()
+from yacpl import Bg, Fg, Printer
+yacpl = Printer()
 
-yacpl("&an;test&r; &ku;text&r;")
+yacpl("Hello, world!", Bg.CYAN, Fg.RED)
