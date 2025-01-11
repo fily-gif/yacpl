@@ -6,7 +6,5 @@ class Printer():
 		pass
 
 	def __call__(self, text, fg, bg):
-		#print(text, fg, bg)
-		#logging.log("sdf")
 		finished = colorize(text, fg, bg)
 		print(finished)
