@@ -6,7 +6,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 setup(
     name='yacpl',
-	version='1.0.8',
+	version='2.0.0',
     packages=find_packages(),
 	package_dir={'': '.'},
     long_description=long_description,

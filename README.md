@@ -6,7 +6,7 @@
 
 ![yacpl intro gif](.assets/yacpl-intro.gif)
 ###### NOTE: this gif is horrible.
-## Installation
+## Installation:
 
 ```bash
 $ python3 -m pip install yacpl
@@ -15,10 +15,18 @@ $ python3 -m pip install yacpl
 ## Usage:
 
 ```python
-from yacpl import Yacpl, Color
+from yacpl import Bg, Fg, Printer
+yacpl = Printer()
 
-yacpl = Yacpl()
+yacpl("Hello, world!", Bg.CYAN, Fg.RED)
+```
 
-yacpl("Hello, World!", fg=Color.RED, bg=Color.WHITE) # bg is optional as it defaults to `Color.BLACK`
-# vscode should automatically pick up the colors too
+## Development:
+
+```bash
+$ git clone https://github.com/fily-gif/yacpl.git # or `gh repo clone fily-gif/yacpl`
+$ python3 -m pip install -r requirements.txt
+# do your thing
+# to test your changes: do
+$ python3 -m pip install -e . 
 ```
