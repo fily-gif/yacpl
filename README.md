@@ -1,14 +1,11 @@
 # YACPL
 
-> `Yet Another Color Print Library` A simple `print()`-esque library that supports ***colors***!
-
-> [!CAUTION]
-> **THIS IS A DEV VERSION OF YACPL. FOR THE STABLE VERSION PLEASE SEE THE `MAIN` BRANCH**
----
-> [!NOTE]
-> **THIS IS A REWRITE BRANCH. THIS BRANCH SHOULD <ins>NOT</ins> BE USED <ins>AT. ALL.</ins>**
+> `Yet Another Color Print Library` A simple `print()`-esque library that supports ***<u>colors</u>***!
+> 
 ###### yes i know that this is like the simplest project that does the same as colorama and i really dont care tbh
 
+![yacpl intro gif](.assets/yacpl-intro.gif)
+###### NOTE: this gif is horrible.
 ## Installation
 
 ```bash

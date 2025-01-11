@@ -1,3 +1,4 @@
+
 from enum import Enum
 
 class Fg(Enum):
@@ -33,3 +34,4 @@ def colorize(text, fg=Fg.RESET, bg=Bg.RESET):
 	test = _construct(fg.value, bg.value)
 	#print(f"color {test}")
 	return f"{test}{text}\033[0m"
+
